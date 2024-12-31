@@ -36,12 +36,12 @@ Users should be able to:
 
 **Mobile Design**
 
-![Notifications Page Screenshot](design/mobile-design.png)
+<img src="design/mobile-design.png" height="750" >
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/notifications-page-_IGb2aHmB6)
+- Live Site URL: [Live Site](https://yashi-singh-9.github.io/Notifications-Page/)
 
 ## My process
 
