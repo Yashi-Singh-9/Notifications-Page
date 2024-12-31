@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+</head>
+<body>
+  <div class="notification-container">
+    <div class="header">
+      <h1>Notifications <span class="number">3</span></h1>
+      <span class="read" id="markAllRead">Mark all as read</span>
+    </div>
+    <ul id="notificationsList" class="notifications-list">
+      <li class="notification unread">
+        <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Mark Webber</span> 
+            reacted to your recent post 
+            <span class="title">My first tournament today! <i class="fa-solid fa-circle"></i></span>
+          </p>          
+          <span class="time">1m ago</span>
+        </div>        
+      </li>
+      <li class="notification unread">
+        <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Angela Gray</span> 
+            followed you <i class="fa-solid fa-circle"></i>
+          </p>
+          
+          <span class="time">5m ago</span>
+        </div>        
+      </li>
+      <li class="notification unread">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Jacob Thompson</span> 
+            has joined your group
+            <span class="title club">Chess Club</span>
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <span class="time">1 day ago</span>
+        </div>        
+      </li>
+      <li class="notification">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Rizky Hasanuddin</span> 
+            sent you a private message
+          </p>
+          <span class="time">5 days ago</span>
+        </div>        
+        <div class="message-preview">
+          <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+        </div>
+      </li>
+      <li class="notification">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Kimberly Smith</span> 
+            commented on your picture
+          </p>
+          <span class="time">1 week ago</span>
+        </div>        
+        <img src="assets/images/image-chess.webp" alt="Chess Playing" class="chess">
+      </li>
+      <li class="notification">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Nathan Peterson</span> 
+            reacted to your recent post
+            <span class="title">5 end-game strategies to increase your win rate</span>
+          </p>
+          <span class="time">2 weeks ago</span>
+        </div>        
+      </li>
+      <li class="notification">
+        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim Profile">
+        <div class="notification-content">
+          <p>
+            <span class="name">Anna Kim</span> 
+            left the group
+            <span class="title club">Chess Club</span>
+          </p>
+          <span class="time">2 weeks ago</span>
+        </div>        
+      </li>
+     </ul>
+  </div>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/yashi-singh-b4143a246" target="_blank">Yashi Singh</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

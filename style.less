@@ -1,0 +1,232 @@
+@font-path: 'assets/fonts/static'; 
+@red: hsl(1, 90%, 64%);
+@blue: hsl(219, 85%, 26%);
+@white: hsl(0, 0%, 100%);
+@very-light-grayish-blue: hsl(210, 60%, 98%);
+@light-grayish-blue-1: hsl(211, 68%, 94%);
+@light-grayish-blue-2: hsl(205, 33%, 90%);
+@grayish-blue: hsl(219, 14%, 63%);
+@dark-grayish-blue: hsl(219, 12%, 42%);
+@ver-dark-blue: hsl(224, 21%, 14%);
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 800; 
+  src: url('@{font-path}/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500; 
+  src: url('@{font-path}/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: @very-light-grayish-blue;
+  height: auto;
+}
+
+.notification-container{
+  background-color: @white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  max-width: 750px;
+  width: 100%;
+  margin: 4rem auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 580px) {
+    width: unset;
+    margin: unset;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 375px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    h1{
+      color: @ver-dark-blue;
+      font-weight: 800;
+      font-size: 2rem;
+
+      @media (max-width: 540px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 1.3rem;
+      }
+
+      .number{
+        font-size: 1.4rem;
+        background-color: @blue;
+        color: @white;
+        padding: 0.2rem 0.7rem;
+        border-radius: 0.5rem;
+
+        @media (max-width: 425px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .read{
+      color: @dark-grayish-blue;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 1.1rem;
+
+      &:hover{
+        color: @blue;
+      }
+    }
+  }
+
+  .notifications-list{
+    list-style: none;
+
+    .notification{
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      margin-bottom: 0.8rem;
+
+      img{
+        width: 3.5rem;
+        height: 3.5rem;
+        object-fit: cover;
+        border: 1px solid @light-grayish-blue-1;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .notification-content{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        p{
+          color: @dark-grayish-blue;
+          cursor: pointer;
+          margin-bottom: 0.3rem;
+
+          .name{
+            font-weight: 800;
+            font-size: 1.13rem;
+            color: @ver-dark-blue;
+            transition: 0.3s ease;
+            margin-right: 0.4rem;
+    
+            &:hover{
+              color: @blue;
+            }
+          }
+
+          .title{
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s ease;
+            line-height: 1.7;
+            margin-left: 0.4rem;
+
+            &:hover{
+              color: @blue;
+            }
+          }
+          
+          .club{
+            color: @blue !important;
+
+            &:hover{
+              color: @dark-grayish-blue !important;
+            }
+          }
+
+          i{
+            color: @red;
+            margin-left: 0.4rem;
+            font-size: 0.6rem;
+            vertical-align: middle;
+          }
+        }
+
+        .time{
+          color: @grayish-blue;
+        }
+
+        .chess{
+          border-radius: 0.4rem;
+        }
+      }
+
+      .chess {
+        border-radius: 0.5rem !important;
+        object-fit: cover;
+      }
+    }
+
+    .message-preview{
+      border-radius: 0.5rem;
+      border: 1px solid @light-grayish-blue-2;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      max-width: 565px;
+      width: 100%;
+      margin-left: 4.5rem;
+      color: @dark-grayish-blue;
+
+
+      &:hover{
+        background-color: @light-grayish-blue-1;
+      }
+    }
+
+    .unread{
+      background-color: @very-light-grayish-blue;
+      border-radius: 0.5rem;
+      border: 1px solid @light-grayish-blue-2;
+    }    
+  }
+}
+
+footer{
+  font-size: 0.9rem; 
+  text-align: center; 
+  margin: -2rem auto 2rem auto;
+
+  @media (max-width: 540px) {
+    margin: 1rem auto;
+  }
+
+  a,
+  a:visited{
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+  }
+}

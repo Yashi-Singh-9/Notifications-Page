@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 800;
+  src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500;
+  src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(210, 60%, 98%);
+  height: auto;
+}
+.notification-container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  max-width: 750px;
+  width: 100%;
+  margin: 4rem auto;
+}
+@media (max-width: 768px) {
+  .notification-container {
+    width: 90%;
+  }
+}
+@media (max-width: 580px) {
+  .notification-container {
+    width: unset;
+    margin: unset;
+  }
+}
+.notification-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 375px) {
+  .notification-container .header {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.notification-container .header h1 {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+  font-size: 2rem;
+}
+@media (max-width: 540px) {
+  .notification-container .header h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .notification-container .header h1 {
+    font-size: 1.3rem;
+  }
+}
+.notification-container .header h1 .number {
+  font-size: 1.4rem;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 425px) {
+  .notification-container .header h1 .number {
+    font-size: 1rem;
+  }
+}
+.notification-container .header .read {
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+.notification-container .header .read:hover {
+  color: hsl(219, 85%, 26%);
+}
+.notification-container .notifications-list {
+  list-style: none;
+}
+.notification-container .notifications-list .notification {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+}
+.notification-container .notifications-list .notification img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.notification-container .notifications-list .notification .notification-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.notification-container .notifications-list .notification .notification-content p {
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+.notification-container .notifications-list .notification .notification-content p .name {
+  font-weight: 800;
+  font-size: 1.13rem;
+  color: hsl(224, 21%, 14%);
+  transition: 0.3s ease;
+  margin-right: 0.4rem;
+}
+.notification-container .notifications-list .notification .notification-content p .name:hover {
+  color: hsl(219, 85%, 26%);
+}
+.notification-container .notifications-list .notification .notification-content p .title {
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  line-height: 1.7;
+  margin-left: 0.4rem;
+}
+.notification-container .notifications-list .notification .notification-content p .title:hover {
+  color: hsl(219, 85%, 26%);
+}
+.notification-container .notifications-list .notification .notification-content p .club {
+  color: hsl(219, 85%, 26%) !important;
+}
+.notification-container .notifications-list .notification .notification-content p .club:hover {
+  color: hsl(219, 12%, 42%) !important;
+}
+.notification-container .notifications-list .notification .notification-content p i {
+  color: hsl(1, 90%, 64%);
+  margin-left: 0.4rem;
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+.notification-container .notifications-list .notification .notification-content .time {
+  color: hsl(219, 14%, 63%);
+}
+.notification-container .notifications-list .notification .notification-content .chess {
+  border-radius: 0.4rem;
+}
+.notification-container .notifications-list .notification .chess {
+  border-radius: 0.5rem !important;
+  object-fit: cover;
+}
+.notification-container .notifications-list .message-preview {
+  border-radius: 0.5rem;
+  border: 1px solid hsl(205, 33%, 90%);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  max-width: 565px;
+  width: 100%;
+  margin-left: 4.5rem;
+  color: hsl(219, 12%, 42%);
+}
+.notification-container .notifications-list .message-preview:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+.notification-container .notifications-list .unread {
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 0.5rem;
+  border: 1px solid hsl(205, 33%, 90%);
+}
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: -2rem auto 2rem auto;
+}
+@media (max-width: 540px) {
+  footer {
+    margin: 1rem auto;
+  }
+}
+footer a,
+footer a:visited {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
